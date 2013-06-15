@@ -7,12 +7,20 @@ ActiveAdmin.register_page "Logs" do
     @log = params[:log] || @logs.first
   end
 
+  page_action :refresh do
+    log_file = Rails.root.join("log/#{params[:log]}.log")
+    log = `tail -n 10 #{log_file}`
+    safe_log = Rack::Utils.escape_html(log)
+    render :text => "#{safe_log}"
+  end
+
   sidebar "Logs", :partial => "sidebar"
   
   content do
     panel "Log" do
-      "radu was here"
+      render "log"
     end
   end
+  
 end
 

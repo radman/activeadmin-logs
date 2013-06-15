@@ -1,0 +1,18 @@
+<pre id="logs" style="width: 100%; white-space: pre-wrap;">
+</pre>
+
+<script type="text/javascript">
+  $(document).ready(function(){
+
+    window.setInterval(updateLog, 1000);
+    function updateLog() {
+      $.ajax({
+        url: "<%= admin_logs_refresh_path(:log => @log) %>",
+        success: function(response) {
+          $("pre#logs").html(response);
+        }
+      });
+    }
+  });
+</script>
+
