@@ -1,5 +1,5 @@
-require "active_admin/logs/version"
-require "active_admin/logs/engine"
+require "activeadmin-logs/version"
+require "activeadmin-logs/engine"
 
 
 #module ActiveAdmin
