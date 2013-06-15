@@ -1,0 +1,6 @@
+<ul>
+  <% @logs.each do |log| %>
+    <li><%= link_to log, admin_logs_path(:log => log) %></li>
+  <% end %>
+</li>
+
