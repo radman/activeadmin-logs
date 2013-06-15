@@ -1,5 +1,3 @@
-module ActiveAdmin
-  module Logs
-    VERSION = "0.0.1"
-  end
+module ActiveAdminLogs
+  VERSION = "0.0.1"
 end

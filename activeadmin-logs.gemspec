@@ -5,7 +5,7 @@ require 'activeadmin/logs/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "activeadmin-logs"
-  spec.version       = ActiveAdmin::Logs::VERSION
+  spec.version       = ActiveAdminLogs::VERSION
   spec.authors       = ["Radu Vlad"]
   spec.email         = ["radu.a.vlad@gmail.com"]
   spec.description   = %q{Logs for ActiveAdmin}
